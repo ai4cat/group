@@ -118,11 +118,13 @@ html, body {
 
 
 
-
+#section-home-content {
+  .home-content-wrap {
+    padding: 2rem 4rem;
+  }
+}
 
 .home-content-wrap {
-
-  padding: 2rem 4rem;
 
   /* 一句话介绍——醒目引语 */
   .tagline-section {
@@ -477,6 +479,10 @@ html, body {
     .carousel-item {
       height: 450px;
     }
+  }
+
+  #section-home-content .home-content-wrap {
+    padding: 1rem ;
   }
 
 }

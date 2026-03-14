@@ -59,48 +59,41 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
     </div>
 
     <!-- 核心能力展示 (浅色卡片) -->
-    <h2 class="section-title">核心能力</h2>
+    <h2 class="section-title">Research</h2>
     <div class="core-grid">
-      <div class="core-card">
-        <div class="core-icon"><i class="fas fa-atom"></i></div>
-        <h3>量子架构</h3>
-        <p>超导量子处理器、低温CMOS 集成，保真度超过99.8%</p>
-      </div>
-      <div class="core-card">
-        <div class="core-icon"><i class="fas fa-microchip"></i></div>
-        <h3>异构加速</h3>
-        <p>基于Chiplet的AI引擎，存内计算，突破冯·诺依曼瓶颈</p>
-      </div>
-      <div class="core-card">
-        <div class="core-icon"><i class="fas fa-wave-square"></i></div>
-        <h3>光电融合</h3>
-        <p>硅光互连，低延迟高带宽，片上激光器阵列</p>
-      </div>
-      <div class="core-card">
-        <div class="core-icon"><i class="fas fa-brain"></i></div>
-        <h3>神经符号</h3>
-        <p>神经符号推理，可解释大模型，科学发现引擎</p>
-      </div>
+
+      {{ range $index, $item := .Params.research_capability }}
+        <div class="core-card">
+          <div class="core-icon"><i class="{{$item.icon}}"></i></div>
+          <h3>{{ $item.title | markdownify | safeHTML}}</h3>
+          <p>{{ $item.desc | markdownify | safeHTML}}</p>
+        </div>
+      {{ end }}
+
     </div>
 
+
+
+
+
+    {{- $query := first 3 site.Data.publications -}}
+    {{- $query = sort $query "year" "desc" -}}
+
     <!-- 代表论文 -->
-    <h2 class="section-title">代表论文</h2>
+    <h2 class="section-title">Selected Publications</h2>
     <div class="papers-grid">
-      <div class="paper-item">
-        <span class="paper-venue">Nature · 2025</span>
-        <div class="paper-title">室温量子相干在光子声子耦合中的实现</div>
-        <div class="paper-authors">J. Chen, R. S. Williams, et al.</div>
-      </div>
-      <div class="paper-item">
-        <span class="paper-venue">Science · 2024</span>
-        <div class="paper-title">可扩展的加速器架构：超越摩尔定律的异构计算</div>
-        <div class="paper-authors">A. Patel, M. Lee, 多伦多大学团队</div>
-      </div>
-      <div class="paper-item">
-        <span class="paper-venue">ISSCC 2025</span>
-        <div class="paper-title">基于红黑树的存内处理单元，能效达150TOPS/W</div>
-        <div class="paper-authors">K. Nakamura, S. Verdon, et al.</div>
-      </div>
+
+      {{ range $index, $item := $query }}
+
+
+        <div class="paper-item">
+          <span class="paper-venue">{{ $item.journal | markdownify | safeHTML}} · {{$item.year}}</span>
+          <div class="paper-title">{{ $item.title | markdownify | safeHTML}}</div>
+          <div class="paper-authors">{{ $item.authors_text | markdownify | safeHTML}}</div>
+        </div>
+
+      {{ end }}
+
     </div>
 
     <!-- 图片展示 -->

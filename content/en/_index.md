@@ -72,37 +72,34 @@ heroSlideBlock:
     loop: true
     # Duration of transition between slides (in ms)
     interval: 1000
+  
+  
+  
 
 
+research_capability: 
+  - title: AI for Catalyst
+#    icon: "fas fa-atom"
+    icon: "fas fa-brain"
+    desc:   We integrate AI-driven inverse materials design with real experimental validation to accelerate the discovery and optimization of high-performance catalysts.
+
+  - title: Autonomous Experimentation
+#    icon: "fas fa-microchip"
+    icon: "fas fa-robot"
+    desc:  We build autonomous experimental platforms to enable the automation and high-throughput optimization of catalytic materials research, improving both experimental efficiency and result reliability.
+
+  - title: Catalysis
+#    icon: "fas fa-wave-square"
+    icon: "fas fa-flask"
+    desc:  Focus on heterogeneous catalysis and single-atom catalysis, exploring the construction of active sites and reaction mechanisms in key catalytic processes.
+
+  - title: Electrochemistry
+#    icon: "fas fa-brain"
+    icon: "fas fa-bolt"
+    desc:  We investigate electrochemical interfacial processes and energy conversion mechanisms to develop efficient electrocatalytic materials and reaction systems.
 
 
-
-
-
-
-newsBlock:
-  block: collection
-  content:
-    title: Latest News
-    count: 5
-    filters:
-      author: ''
-      category: ''
-      exclude_featured: false
-      publication_type: ''
-      tag: ''
-    offset: 0
-    order: desc
-    page_type: news
-    
-#    archive:
-#      enable: true
-   
-  design:
-    view: card
-    columns: '1'      
-
-
+ 
 
 
 ---  
