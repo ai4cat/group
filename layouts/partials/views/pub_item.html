@@ -1,22 +1,27 @@
 {{ $item := . }}
 
-<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <sapn class="pub-journal">[{{ $item.journal | markdownify | safeHTML}}] </sapn>
-  <sapn class="pub-title">{{ $item.title | markdownify | safeHTML}}</sapn><br>
-  <sapn class="pub-author">{{ $item.author_text | markdownify | safeHTML}}</sapn><br>
-  <em class="pub-info">{{ $item.publication_info | markdownify | safeHTML}}</em><br>
-  {{ if $item.links}}
-  <p>
-    {{ range $item.links }}
-      {{- $url := .url -}}
-      {{- if eq .link_type "local" -}}
-        {{- $url = .url | relURL -}}
-      {{- end -}}
-    <a class="btn btn-outline-primary btn-page-header btn-sm" target="_blank" href="{{ $url }}">{{ .text }}</a>
+<div class="paper-item row view-citation" style="">
+
+
+  <div class="col-12 col-md-3">
+    <div class="pub-journal">{{ $item.journal | markdownify | safeHTML}} ({{$item.year}}) </div>
+    {{ if $item.links}}
+      <div>
+        {{ range $item.links }}
+          {{- $url := .url -}}
+          {{- if eq .link_type "local" -}}
+            {{- $url = .url | relURL -}}
+          {{- end -}}
+          <a class="btn btn-outline-primary btn-page-header btn-sm" target="_blank" href="{{ $url }}">{{ .text }}</a>
+        {{ end }}
+      </div>
     {{ end }}
-  </p>
-  {{ end }}
+  </div>
+  <div class="col-12 col-md-9">
+    <div class="pub-title"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i> {{ $item.title | markdownify | safeHTML}}</div>
+    <div class="pub-author">{{ $item.authors_text | markdownify | safeHTML}}</div>
+
+  </div>
 
 
 </div>

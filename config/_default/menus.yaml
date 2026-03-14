@@ -10,19 +10,19 @@ main:
     weight: 30
 
   - name: Research
-    url: people
+    url: research
     weight: 40
 
   - name: Platforms
-    url: publications
+    url: platform
     weight: 50
 
   - name: Highlights
-    url: research
+    url: highlight
     weight: 60
 
   - name: Publications
-    url: gallery
+    url: publications
     weight: 70
 
   - name: Contact

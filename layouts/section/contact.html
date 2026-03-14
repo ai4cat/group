@@ -1,0 +1,56 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper mt-5 page-contacts">
+  {{ with .Content }}
+    <div class="article-style">{{ . }}</div>
+  {{ end }}
+
+
+
+  <!-- 联系信息网格 (名片格式) -->
+  <div class="row home-content-wrap" style="padding: 1rem 0;">
+
+    <div class=" col-12 col-md-4">
+      <div class="contact-item paper-item ">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <h4>电子邮箱</h4>
+        <p><a href="mailto:ai4c@pku.edu.cn">ai4c@pku.edu.cn</a><br>
+          <span style="color: #94a3b8; font-size: 0.85rem;">课题组公共邮箱</span></p>
+        <p style="margin-top: 0.5rem;"><a href="mailto:pi.ai4c@pku.edu.cn">pi.ai4c@pku.edu.cn</a><br>
+          <span style="color: #94a3b8; font-size: 0.85rem;">PI 联系</span></p>
+      </div>
+    </div>
+
+
+
+
+    <div class=" col-12 col-md-4">
+      <div class="contact-item paper-item ">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h4>北京总部</h4>
+        <p>北京大学 材料科学与工程学院<br>北京市海淀区颐和园路5号<br>邮编：100871</p>
+      </div>
+    </div>
+
+
+
+
+    <div class=" col-12 col-md-4">
+
+      <div class="contact-item paper-item   ">
+        <div class="contact-icon"><i class="fas fa-map-pin"></i></div>
+        <h4>深圳研究生院</h4>
+        <p>北京大学深圳研究生院<br>深圳市南山区西丽大学城<br>邮编：518055</p>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+{{- end -}}
