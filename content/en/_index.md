@@ -5,6 +5,11 @@ type: home_index
 
 
 
+section_titles:
+  research: Research
+  publication: Selected Publications
+  image: Images
+  video: Videos
 
 # 实验室介绍
 heroBlock:

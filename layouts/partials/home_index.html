@@ -59,7 +59,7 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
     </div>
 
     <!-- 核心能力展示 (浅色卡片) -->
-    <h2 class="section-title">Research</h2>
+    <h2 class="section-title">{{ .Params.section_titles.research | markdownify }}</h2>
     <div class="core-grid">
 
       {{ range $index, $item := .Params.research_capability }}
@@ -80,7 +80,7 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
     {{- $query = sort $query "year" "desc" -}}
 
     <!-- 代表论文 -->
-    <h2 class="section-title">Selected Publications</h2>
+    <h2 class="section-title">{{ .Params.section_titles.publication | markdownify }}</h2>
     <div class="papers-grid">
 
       {{ range $index, $item := $query }}
@@ -97,14 +97,14 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
     </div>
 
     <!-- 图片展示 -->
-    <h2 class="section-title">Images</h2>
+    <h2 class="section-title">{{ .Params.section_titles.image | markdownify }}</h2>
     <div class="home-images-gallery">
       {{.Params.image_show_content | markdownify}}
     </div>
 
 
     <!-- 视频展示 -->
-    <h2 class="section-title">Videos</h2>
+    <h2 class="section-title">{{ .Params.section_titles.video | markdownify }}</h2>
     <div class="video-section">
       <div class="video-card">
         <div class="video-thumb" >
