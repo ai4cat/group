@@ -257,6 +257,22 @@ html, body {
     padding-left: 1rem;
   }
 
+  .repositories {
+    .paper-title {
+      font-size: 1rem;
+      i {
+        color: var(--accent-red);
+      }
+      a {
+        color: #1e1e1e;
+      }
+    }
+    .paper-authors {
+      border-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+
 
   /* 图片占位颜色调亮一点，更符合整体氛围 */
   //.img1 { background-image: linear-gradient(0deg, #882222, #442222), url('https://placehold.co/600x600/882222/ffffff?text=Nanotech+Lab'); }

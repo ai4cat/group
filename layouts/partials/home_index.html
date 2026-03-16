@@ -130,41 +130,31 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
         </div>*/}}
       </div>
     </div>
+
+
+
+    <!-- 项目仓库 -->
+    <h2 class="section-title">{{ .Params.section_titles.repos | markdownify }}</h2>
+    <div class="papers-grid repositories">
+
+      {{ range $index, $item := site.Data.common_data.section_repositories }}
+
+
+        <div class="paper-item">
+          <div class="paper-title">
+            <i class="fab fa-github"></i>  <a href="{{$item.url}}" target="_blank">{{ $item.name | markdownify | safeHTML}}</a>
+          </div>
+          <div class="paper-authors">{{ $item.desc | markdownify | safeHTML}}</div>
+        </div>
+
+      {{ end }}
+
+    </div>
+
+
   </div>
 
 </div>
 
-
-
-{{/*
-  Recent works
-
-
-<section id="section-recent-works" class="home-section ">
-  <div class="container">
-    <div class="section-c-title" >Recent Works</div>
-    <div class="grid grid-cols-1 gap-x-12 gap-y-16  lg:grid-cols-3">
-      {{ range .Params.recentWorksBlock }}
-
-        {{- $image := resources.Get (path.Join "media" .img) -}}
-
-        <div class="">
-
-          <div class="card"  >
-            <a href="{{ .link }}"><img src="{{ $image.RelPermalink }}" alt="{{ .title }}"></a>
-            <div class="card-body">
-              <!-- <h5 class="card-title">title</h5> -->
-              <p class="card-text">{{ .desc }}</p>
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-          </div>
-
-        </div>
-      {{ end }}
-
-    </div>
-  </div>
-</section>
-*/}}
 
 

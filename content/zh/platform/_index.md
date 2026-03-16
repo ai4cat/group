@@ -1,5 +1,5 @@
 ---
-title: Platform
+title: 平台
   
 videos:
   - src: "videos/h1.mp4"

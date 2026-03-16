@@ -6,11 +6,11 @@ type: home_index
 
 
 section_titles:
-  research: Research
-  publication: Selected Publications
-  image: Images
-  video: Videos
-  repos: Codebase
+  research: 研究
+  publication: 代表论文
+  image: 图片
+  video: 视频
+  repos: 项目仓库
 
 # 实验室介绍
 heroBlock:
@@ -124,8 +124,7 @@ images_list:
     path: "images/home/h5.png"
 
 image_show_content: "{{< imgList image_list_var=\"images_list\" >}}"
-
-
+    
 
 ---  
 

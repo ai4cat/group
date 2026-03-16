@@ -39,18 +39,13 @@
         {{/*{{ $imageHeight:= $scratch.Get "image-height" }}
         {{ $imageWidth:= $scratch.Get "image-width" }}*/}}
 
-
-
-        {{/*{{ .path }} --- href="{{ relLangURL .path }}"
-        {{ $image }}*/}}
-
         <div class="gallery-item">
 
-                <a      href="{{ relLangURL .path }}"
+                <a      href="{{ .path | relURL }}"
                         style="display: block;"
                         class="glightbox">
                     <img
-                            src="{{ relLangURL .path }}"
+                            src="{{ .path | relURL }}"
                             class="img"
                             style="margin: 0;"
                             alt="{{ .title }}"
