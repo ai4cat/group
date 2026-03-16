@@ -1,5 +1,10 @@
 <!-- get value from params -->
 
+{{/*
+
+使用示例, 在 md 文件里面写：
+{{< imgList image_list_var="images_list" >}}
+*/}}
 
 
 
@@ -57,6 +62,11 @@
     {{ end }}
 </div>
 <script type="text/javascript">
-  const options = {};
-  const lightbox = GLightbox({ ...options });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // DOM 已加载，可以安全操作
+    // console.log('DOM 已完全加载');
+    const options = {};
+    const lightbox = GLightbox({ ...options });
+  });
 </script>

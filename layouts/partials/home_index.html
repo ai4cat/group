@@ -98,12 +98,10 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
 
     <!-- 图片展示 -->
     <h2 class="section-title">Images</h2>
-    <div class="image-gallery-grid">
-      <div class="gallery-img img1"><span class="img-label">纳米加工</span></div>
-      <div class="gallery-img img2"><span class="img-label">fMRI 实时分析</span></div>
-      <div class="gallery-img img3"><span class="img-label">量子控制板</span></div>
-      <div class="gallery-img img4"><span class="img-label">粒子加速器腔</span></div>
+    <div class="home-images-gallery">
+      {{.Params.image_show_content | markdownify}}
     </div>
+
 
     <!-- 视频展示 -->
     <h2 class="section-title">Videos</h2>
@@ -115,10 +113,10 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
           <video src="{{ "videos/h1.mp4" | relURL }}" controls="controls"></video>
 
         </div>
-        <div class="video-meta">
+        {{/*<div class="video-meta">
           <h4>量子芯片的极低温测试</h4>
           <p>走进稀释制冷机 · 3分44秒</p>
-        </div>
+        </div>*/}}
       </div>
       <div class="video-card">
         <div class="video-thumb" >
@@ -126,10 +124,10 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
 
           <video src="{{ "videos/h2.mp4" | relURL }}" controls="controls"></video>
         </div>
-        <div class="video-meta">
+        {{/*<div class="video-meta">
           <h4>硅光AI加速器原型</h4>
           <p>片上互连演示 · 6分12秒</p>
-        </div>
+        </div>*/}}
       </div>
     </div>
   </div>

@@ -257,52 +257,57 @@ html, body {
     padding-left: 1rem;
   }
 
-  /* 图片展示区域 (浅色底，图片保留深色科技感) */
-  .image-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
-    margin: 2rem 0 4rem;
-  }
-
-  .gallery-img {
-    aspect-ratio: 1 / 1;
-    background-size: cover;
-    background-position: center;
-    background-color: #e0e0e0;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    transition: 0.3s;
-    filter: grayscale(20%);
-    display: flex;
-    align-items: flex-end;
-    padding: 0.8rem;
-    color: white;
-    font-weight: 600;
-    text-shadow: 0 2px 6px black;
-    box-shadow: inset 0 -40px 30px -20px rgba(0,0,0,0.5);
-  }
-
-  .gallery-img:hover {
-    transform: scale(1.02);
-    border-color: var(--accent-red);
-    filter: grayscale(0%);
-    box-shadow: 0 0 20px rgba(198,40,40,0.3);
-  }
 
   /* 图片占位颜色调亮一点，更符合整体氛围 */
-  .img1 { background-image: linear-gradient(0deg, #882222, #442222), url('https://placehold.co/600x600/882222/ffffff?text=Nanotech+Lab'); }
-  .img2 { background-image: linear-gradient(0deg, #992222, #332222), url('https://placehold.co/600x600/992222/ffffff?text=Brain+Scan'); }
-  .img3 { background-image: linear-gradient(0deg, #771111, #222222), url('https://placehold.co/600x600/771111/ffffff?text=Quantum+Chip'); }
-  .img4 { background-image: linear-gradient(0deg, #881111, #1a1a1a), url('https://placehold.co/600x600/881111/ffffff?text=Accelerator'); }
+  //.img1 { background-image: linear-gradient(0deg, #882222, #442222), url('https://placehold.co/600x600/882222/ffffff?text=Nanotech+Lab'); }
+  //.img2 { background-image: linear-gradient(0deg, #992222, #332222), url('https://placehold.co/600x600/992222/ffffff?text=Brain+Scan'); }
+  //.img3 { background-image: linear-gradient(0deg, #771111, #222222), url('https://placehold.co/600x600/771111/ffffff?text=Quantum+Chip'); }
+  //.img4 { background-image: linear-gradient(0deg, #881111, #1a1a1a), url('https://placehold.co/600x600/881111/ffffff?text=Accelerator'); }
 
-  .img-label {
-    background: rgba(198, 40, 40, 0.8);
-    padding: 0.2rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    backdrop-filter: blur(4px);
+  .home-images-gallery {
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      margin: 2rem 0 4rem;
+
+      .gallery-item {
+        aspect-ratio: 1 / 1;
+        background-size: cover;
+        background-position: center;
+        background-color: #e0e0e0;
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        transition: 0.3s;
+        filter: grayscale(20%);
+        display: flex;
+        align-items: flex-end;
+        padding: 0.8rem;
+        color: white;
+        font-weight: 600;
+        text-shadow: 0 2px 6px black;
+        box-shadow: inset 0 -40px 30px -20px rgba(0,0,0,0.5);
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.02);
+        border-color: var(--accent-red);
+        filter: grayscale(0%);
+        box-shadow: 0 0 20px rgba(198,40,40,0.3);
+      }
+
+      .character-desc {
+        background: rgba(198, 40, 40, 0.8);
+        padding: 0.2rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        backdrop-filter: blur(4px);
+        z-index: 10;
+      }
+    }
+
   }
+
 
   /* 视频展示区域 (浅色卡片) */
   .video-section {
@@ -485,15 +490,16 @@ html, body {
     padding: 1rem ;
   }
 
+  .home-content-wrap {
+    .home-images-gallery {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
 }
 
 
-@media (min-width: 780px) {
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  }
 
-  .lg\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-  }
-}
+

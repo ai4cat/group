@@ -100,7 +100,25 @@ research_capability:
 
 
  
+images_list:
+  
+  - title:  ""
+    path: "images/home/h1.png"
+    
+  - title:  "Robotic High-Temperature Calaination Workflow"
+    path: "images/home/h2.png"
+    
+  - title:  "Robotic High-Temperature Calaination Workflow"
+    path: "images/home/h3.png"
+    
+  - title:  ""
+    path: "images/home/h4.png"
+    
+  - title:  "Automated Electrochemical Evaluation of ORR"
+    path: "images/home/h5.png"
 
+image_show_content: "{{< imgList image_list_var=\"images_list\" >}}"
+    
 
 ---  
 

@@ -17,9 +17,9 @@ main:
     url: platform
     weight: 50
 
-  - name: Highlights
-    url: highlight
-    weight: 60
+#  - name: Highlights
+#    url: highlight
+#    weight: 60
 
   - name: Publications
     url: publications
