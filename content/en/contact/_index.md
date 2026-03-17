@@ -3,7 +3,7 @@ title: Contact
  
  
 email_info:
-    email: chenwb@pku.edu.cn
+    email: weibin@mit.edu
     type: Personal Contact
     name: Dr. Weibin Chen  
     
