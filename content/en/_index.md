@@ -20,7 +20,7 @@ heroBlock:
 #   image:
 #      filename: research_topic.jpg
     text: |
-      Building autonomous robotic platforms for catalyst discovery and electrochemical systems
+      An interactive visual companion featuring the robotic platform, experimental workflow, and key moments behind the paper.
   
 
 
