@@ -16,7 +16,7 @@ section_titles:
 heroBlock:
   block: hero
   content:
-    title: AI for Science Researcher  
+    title: AI4C for Autonomous Catalyst Discovery  
 #   image:
 #      filename: research_topic.jpg
     text: |
