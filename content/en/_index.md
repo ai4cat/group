@@ -38,7 +38,7 @@ heroSlideBlock:
       align: center
       background:
         image:
-          filename: group_slides/g1.png
+          filename: group_slides/g4.tif
           filters:
             brightness: 1
         position: right
