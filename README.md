@@ -1,1 +1,1 @@
-# ai4m2026.github.io
+# ai4m-pku.github.io
